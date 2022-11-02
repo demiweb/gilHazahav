@@ -761,4 +761,148 @@ main {
   width: 100%;
   margin-top: -6.2500vw;
   height: 106.842105vh;
+
+  .container {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: 100%;
+  }
+}
+
+.safety__cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 9.25vw;
+  padding-top: 8.8542vw;
+
+  > .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 4.4792vw;
+
+    span {
+      font-weight: 800;
+      font-size: 4.1667vw;
+      line-height: 1;
+      text-align: center;
+      color: #732163;
+      display: inline-block;
+      margin-bottom: 1.6375vw;
+    }
+
+    p {
+
+      max-width: 41.2500vw;
+      font-weight: 400;
+      font-size: 1.1979vw;
+      letter-spacing: 0.01em;
+      line-height: 1.4063vw;
+      text-align: center;
+      color: #732163;
+
+    }
+  }
+}
+
+.safety-steps {
+  width: 100%;
+  padding-left: 6.5625vw;
+  padding-right: 6.5625vw;
+  gap: 7.4479vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.safety-single {
+  width: calc((100% / 3) - ((7.4479vw * 2) / 3));
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 104%;
+    top: 26%;
+    height: 3.1250vw;
+    width: 5.7292vw;
+    display: inline-block;
+    content: '';
+    background: url("../img/ar-l.svg") no-repeat center / 100%;
+  }
+
+  &:last-child {
+    &::before {
+      content: none;
+    }
+  }
+
+  .img {
+    width: auto;
+    height: 7.8125vw;
+    margin-bottom: 0.5208vw;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &:nth-child(1) {
+    .img {
+      margin-right: 0.5208vw;
+    }
+  }
+
+  &:nth-child(2) {
+    .img {
+      margin-right: 0.5208vw;
+    }
+  }
+
+  .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    span {
+      display: inline-block;
+      width: 100%;
+      padding: 1px 0 0.4167vw;
+      border-top: 1px solid #732163;
+      border-bottom: 1px solid #732163;
+
+      font-weight: normal;
+      font-size: 2.0833vw;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      text-align: center;
+      color: #732163;
+      margin-bottom: 0.2604vw;
+
+    }
+
+    p {
+      font-weight: normal;
+      font-size: 1.1979vw;
+      letter-spacing: 0.01em;
+      line-height: 1.4063vw;
+      text-align: center;
+      color: #732163;
+
+    }
+  }
 }
