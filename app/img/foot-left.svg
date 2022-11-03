@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="513.5" height="366" viewBox="0 0 513.5 366">
+  <defs>
+    <filter id="yellow_path" x="0" y="0" width="513.5" height="366" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_8">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_23" data-name="Group 23" transform="translate(4935 -141.5) rotate(90)">
+    <g data-type="innerShadowGroup">
+      <path id="yellow_path-2" data-name="yellow path" d="M1060.857,981a46.216,46.216,0,0,1-41.818-27.229,65.027,65.027,0,0,0-118.078,0A46.216,46.216,0,0,1,859.143,981H778v447.5h365V981Z" transform="translate(-636 3506)" fill="#fefefe"/>
+      <g transform="matrix(0, -1, 1, 0, 141.5, 4935)" filter="url(#yellow_path)">
+        <path id="yellow_path-3" data-name="yellow path" d="M1060.857,981a46.216,46.216,0,0,1-41.818-27.229,65.027,65.027,0,0,0-118.078,0A46.216,46.216,0,0,1,859.143,981H778v447.5h365V981Z" transform="translate(1429 -777.5) rotate(90)" fill="#fff"/>
+      </g>
+      <path id="yellow_path-4" data-name="yellow path" d="M1060.857,981a46.216,46.216,0,0,1-41.818-27.229,65.027,65.027,0,0,0-118.078,0A46.216,46.216,0,0,1,859.143,981H778v447.5h365V981Z" transform="translate(-636 3506)" fill="none" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <g id="Group_22" data-name="Group 22" transform="translate(-1143 93)">
+      <g data-type="innerShadowGroup">
+        <circle id="Ellipse_8-2" data-name="Ellipse 8" cx="37.5" cy="37.5" r="37.5" transform="translate(1430 4346)" fill="#732163"/>
+        <g transform="matrix(0, -1, 1, 0, 1284.5, 4842)" filter="url(#Ellipse_8)">
+          <circle id="Ellipse_8-3" data-name="Ellipse 8" cx="37.5" cy="37.5" r="37.5" transform="translate(496 145.5) rotate(90)" fill="#fff"/>
+        </g>
+      </g>
+      <path id="Union_6" data-name="Union 6" d="M0,20H8.25L11,0l2.75,20H22L11,40Z" transform="translate(1457 4361)" fill="#fcdb48"/>
+    </g>
+  </g>
+</svg>
