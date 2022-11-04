@@ -503,7 +503,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
 body {
   width: 100%; }
 
-main {
+main:not(#save-house) {
   background: url("../img/bg-rec.png") no-repeat top left/100%, #fff;
   background-attachment: fixed; }
 
@@ -1728,7 +1728,7 @@ main {
       text-align: center;
       color: #732163; }
 
-@media screen and (max-width: 1030px) and (min-width: 820px) {
+@media screen and (max-width: 1030px) and (min-width: 780px) {
   .thanks-page {
     padding-top: 100vh; }
   main {
@@ -1754,7 +1754,7 @@ main {
 .fixed-mob-foot {
   display: none; }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 780px) {
   .thanks-block {
     padding-top: 81.444vw;
     z-index: 2;
@@ -2352,6 +2352,9 @@ main {
         -webkit-transition: opacity 0.3s ease;
         -o-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease; }
+        .heart-mob-slide .video .play img {
+          width: 100%;
+          height: 100%; }
       .heart-mob-slide .video.played .play {
         opacity: 0; }
   .house-heart {
@@ -2607,3 +2610,29 @@ main {
     .header .logo a, .header .logo img {
       width: 100%;
       height: auto; } }
+
+@media screen and (max-width: 780px) and (min-width: 600px) {
+  .video-head {
+    height: 75vw; }
+  .happiness {
+    height: 182.8333vw; }
+  .happiness .yellow-mob::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    background: url(../img/yellow2mob.svg) no-repeat top left/100% 100%; }
+  .save-house__cont h1 {
+    top: 83vw; }
+  .heart-mob-slide .video {
+    height: 59vw; }
+  .happiness__cont > .text p {
+    top: 5vw; }
+  .happiness__cont {
+    padding-top: 24.3vw; }
+  .happiness__slides {
+    height: 100vw; } }
