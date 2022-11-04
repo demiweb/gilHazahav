@@ -1,7 +1,132 @@
 body {
   width: 100%;
+
+}
+
+main {
   background: url("../img/bg-rec.png") no-repeat top left / 100%, #fff;
   background-attachment: fixed;
+}
+
+.thanks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 4.6875vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.thanks-img {
+  bottom: 0;
+  right: 0;
+  top: 4.6875vw;
+  width: 57.3958vw;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.thanks-block {
+  width: 42.6042vw;
+  margin-right: auto;
+  height: 100%;
+  padding-right: 2.9688vw;
+  padding-top: 4.8333vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 800;
+    font-size: 7.8125vw;
+    line-height: 1;
+    text-align: right;
+    color: #732163;
+
+  }
+
+  > p {
+    font-weight: normal;
+    font-size: 2.0833vw;
+    letter-spacing: 0.01em;
+    line-height: 2.3438vw;
+    text-align: right;
+    color: #732163;
+    margin-top: 1.3vw;
+    margin-bottom: 4.2188vw;
+
+  }
+
+  .link {
+    margin-bottom: 2.5000vw;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 1.1979vw;
+        line-height: 1.4063vw;
+        text-align: right;
+        color: #732163;
+
+        margin-right: 0.9896vw;
+        max-width: 19.3750vw;
+      }
+    }
+
+    &:nth-of-type(1) {
+      a {
+        img {
+          width: 5.0521vw;
+          height: 5.0521vw;
+          margin-right: 0.7292vw;
+        }
+
+        p {
+          margin-top: -0.8vw;
+        }
+      }
+
+    }
+
+    &:nth-of-type(2) {
+
+      a {
+        img {
+          width: 4.7396vw;
+          height: 4.7396vw;
+          margin-right: 1.0417vw;
+        }
+
+        p {
+          margin-top: -0.11vw;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
 }
 
 .bg-head {
@@ -623,6 +748,10 @@ main {
   }
 
   .text {
+    .arrow-btn {
+      display: none;
+    }
+
     position: absolute;
     background: #FCDB48;
     top: 50%;
@@ -1215,6 +1344,9 @@ main {
 }
 
 @media screen and (max-width: 1030px) and (min-width: 820px) {
+  .thanks-page {
+    padding-top: 100vh;
+  }
   main {
     padding-top: 49.4792vw;
   }
@@ -1249,7 +1381,412 @@ main {
   display: none;
 }
 
+.fixed-mob-foot {
+  display: none;
+}
+
 @media screen and (max-width: 425px) {
+  .thanks-block {
+    padding-top: 81.444vw;
+    z-index: 2;
+    position: relative;
+    padding-right: 8.3333vw;
+    padding-left: 8.0556vw;
+    width: 100%;
+
+    h1 {
+      font-size: 16.6667vw;
+      line-height: 13.8889vw;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5.5vw;
+      color: #FCDB48;
+    }
+
+    > p {
+      font-size: 5.5556vw;
+      margin-bottom: 10.6889vw;
+      line-height: 1;
+      width: 100%;
+      text-align: center;
+    }
+
+    .link {
+      margin-bottom: 9.2vw;
+      a {
+        img {
+          width: 13.8889vw !important;
+          margin-right: 0 !important;
+          height: 13.8889vw !important;
+          flex-shrink: 0;
+
+        }
+
+        p {
+          font-size: 4.1667vw;
+          line-height: 5.5556vw;
+          max-width: none;
+          margin-right: 8.6111vw !important;
+        }
+      }
+    }
+  }
+  .thanks-page {
+    padding-top: 0;
+  }
+  .thanks {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    background: url("../img/textrure-mob.png") repeat-y top left / 100%, #fff;
+
+  }
+  .thanks-img {
+    right: 8.3333vw;
+    left: 8.0556vw;
+    top: 30.0000vw;
+    height: 64.1667vw;
+    bottom: auto;
+    width: auto;
+  }
+  .header {
+    transition: opacity 0.3s ease;
+
+    &.header-fixed {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .fixed-mob-foot {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 9.4444vw;
+    padding-left: 8.3333vw;
+    padding-right: 8.3333vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 1.6667vw;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+
+    &.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .logo {
+      height: auto;
+      width: 34.7222vw;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      a, img {
+        display: flex;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .phone {
+      width: 13.8889vw;
+      height: 13.8889vw;
+      right: 8.3333vw;
+      bottom: 1.1111vw;
+      display: flex;
+      position: absolute;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transition: transform 0.3s ease;
+
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+  }
+  .footer-bot .text {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 2vw;
+
+    p {
+      font-size: 5.5556vw;
+      line-height: 6.9444vw;
+      text-align: center;
+      letter-spacing: 0;
+    }
+  }
+  .form {
+    max-width: 100%;
+    margin-top: 10.8vw;
+
+    form {
+      > p {
+        gap: 6.9444vw;
+      }
+    }
+  }
+  .check-wrap {
+    order: 6;
+    width: 100%;
+    max-width: 100%;
+
+    span {
+      font-size: 4.1667vw;
+      line-height: 7.5000vw;
+      padding-right: 13.556vw;
+
+      &::before {
+        width: 8.3333vw;
+        height: 8.3333vw;
+        right: 2px;
+        top: 58%;
+      }
+    }
+  }
+  .call {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 6vw;
+    padding-right: 17.5vw;
+
+    p {
+      font-size: 6.3889vw;
+      line-height: 7.5000vw;
+      color: #FCDB48;
+    }
+
+    a {
+      font-size: 22.2222vw;
+      line-height: 1;
+      color: #FCDB48;
+
+      margin-top: -2.6vw;
+      margin-right: -1.3vw;
+    }
+  }
+  .btn {
+    height: 12.5000vw;
+    font-size: 6.3889vw;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1px;
+    padding: 4px 4px 2.2222vw;
+  }
+  .input-wrap {
+    width: 100%;
+
+    input {
+      height: 8.0556vw;
+      font-size: 4.1667vw;
+      line-height: 1;
+      padding: 0 0 1.9444vw;
+
+      &::placeholder {
+        font-size: 4.1667vw;
+        line-height: 1;
+      }
+    }
+
+  }
+  .footer-bot {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 6.8111vw;
+    padding-bottom: 22.7222vw;
+    padding-right: 7.7778vw;
+    padding-left: 8.0556vw;
+  }
+  .client__cont .bg {
+    background: url("../img/textrure-mob.png") repeat-y top left / 100%;
+    opacity: 0.5;
+    width: 100%;
+    max-width: 100%;
+
+    img {
+      display: none;
+    }
+  }
+  .client__cont {
+    background: #732163;
+  }
+  .client__outer {
+    padding-top: 0;
+  }
+  .client {
+    margin-top: -14.417vw;
+    height: auto;
+    background: rgba(255, 255, 255, 0);
+
+    &::before {
+      content: none;
+    }
+  }
+  .happiness {
+    z-index: 2;
+  }
+  .client__top {
+    height: auto;
+    padding-top: 125.0000vw;
+  }
+  .client__top .img {
+    width: 100%;
+    height: 125.8333vw;
+  }
+  .client__top .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 18.6111vw;
+    padding-top: 35.5333vw;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8.3333vw;
+    padding-right: 8.3333vw;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.16));
+
+    .arrow-btn {
+      display: flex;
+      top: 3.2222vw;
+    }
+
+    background: url("../img/yellow3mob.svg") no-repeat top left / 101% 100%;
+
+    span {
+      font-size: 13.8889vw;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 6.6354vw;
+    }
+
+    p {
+      br {
+        display: none;
+      }
+
+      text-align: center;
+      font-size: 5.5556vw;
+      line-height: 6.9444vw;
+      margin-bottom: 6.9444vw;
+
+    }
+  }
+  .safety {
+    z-index: 1;
+    height: auto;
+    background: url("../img/textrure-mob.png") repeat-y top left / 100% auto;
+    margin-top: -11.55vw;
+    padding-top: 36.65vw;
+    padding-bottom: 34vw;
+  }
+  .safety__cont {
+    padding: 0 8.3333vw;
+
+    > .text {
+      margin-bottom: 21.989vw;
+
+      span {
+        font-size: 13.8889vw;
+        line-height: 1;
+        margin-bottom: 17.8333vw;
+        max-width: 92%;
+        margin-right: -2px;
+        letter-spacing: 0.006em;
+      }
+
+      p {
+        font-size: 5.5556vw;
+        line-height: 6.9444vw;
+        letter-spacing: 0;
+        max-width: 100%;
+
+      }
+    }
+
+  }
+
+  .safety-steps {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 63.7vw;
+  }
+  .safety-single {
+    width: 100%;
+
+    &::before {
+      height: 16.6667vw;
+      width: 30.5556vw;
+      right: 50%;
+      top: 134.5%;
+      transform: translate(50%, 0) rotate(-90deg);
+    }
+
+    .img {
+      height: 41.6667vw;
+      width: auto;
+      margin-bottom: 2.4111vw;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .text {
+      span {
+        font-size: 11.1111vw;
+        line-height: 1;
+        padding-bottom: 2.5000vw;
+        margin-bottom: 1.2604vw;
+      }
+
+      p {
+        font-size: 5.5556vw;
+        line-height: 6.9444vw;
+        letter-spacing: 0;
+      }
+    }
+  }
+  .safety-steps {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .safety-single:nth-child(1) .img {
+    margin-right: 2.5208vw;
+  }
+  .safety-single:nth-child(2) .img {
+    margin-right: 2.5208vw;
+  }
+  .safety-single:nth-child(3) .img {
+    margin-right: -0.7vw;
+    margin-bottom: 2.9vw;
+  }
+  .safety-single:nth-child(3) .text span {
+    margin-bottom: 1.204vw;
+  }
   .happy-slide .text {
     padding-bottom: 0;
     right: 8.3%;
@@ -1279,6 +1816,7 @@ main {
           width: 0;
         }
       }
+
       .text {
 
         p {

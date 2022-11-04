@@ -1,3 +1,6 @@
+
+
+
 $(window).scroll(function (e) {
     $el = $('.save-house');
     $el.toggleClass('hide', $(this).scrollTop() > (window.innerHeight * 0.8));
@@ -5,9 +8,32 @@ $(window).scroll(function (e) {
 });
 
 
+let footHiden = [...document.querySelectorAll('.header-menu ul a')];
+
+function scrollToWhat() {
+    if (footHiden.length) {
+        footHiden.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                let link = btn.getAttribute("href");
+
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(link).offset().top
+                }, 500);
+            })
+        })
+    }
+}
+
+scrollToWhat();
+
 //arrow btn
 
 let arrowBtn = [...document.querySelectorAll('.arrow-btn')];
+
+
+
 
 function scrollArrow() {
     if (arrowBtn.length) {
@@ -23,6 +49,16 @@ function scrollArrow() {
 }
 
 scrollArrow();
+
+
+$(window).scroll(function (e) {
+    $el = $('.header');
+    $el2 = $('.fixed-mob-foot');
+    $el.toggleClass('header-fixed', $(this).scrollTop() > 15);
+    $el2.toggleClass('show', $(this).scrollTop() > 15);
+
+});
+
 
 //arrow btn
 
@@ -49,7 +85,25 @@ function deskFunction() {
     }
 };
 
-let deskInterval = setInterval(deskFunction, 3100);
+let deskInterval;
+let activeHappy = 0;
+
+let happyBlocks = [...document.querySelectorAll('.happy-slide')];
+
+
+function happyFunction() {
+    happyBlocks.forEach((btn) => {
+        btn.classList.remove('active');
+    });
+
+    happyBlocks[activeHappy].classList.add('active');
+    activeHappy++;
+    if (activeHappy > happyBlocks.length - 1) {
+        activeHappy = 0;
+    }
+};
+let happyInterval;
+
 
 function controlDeskSlider() {
     if (slideDesk.length) {
@@ -84,24 +138,9 @@ controlDeskSlider();
 //happy slider
 
 
-let activeHappy = 0;
-
-let happyBlocks = [...document.querySelectorAll('.happy-slide')];
 
 
-function happyFunction() {
-    happyBlocks.forEach((btn) => {
-        btn.classList.remove('active');
-    });
 
-    happyBlocks[activeHappy].classList.add('active');
-    activeHappy++;
-    if (activeHappy > happyBlocks.length - 1) {
-        activeHappy = 0;
-    }
-};
-
-let happyInterval = setInterval(happyFunction, 2600);
 
 function controlHappySlider() {
     if (happyBlocks.length) {
@@ -122,7 +161,13 @@ function controlHappySlider() {
 }
 
 controlHappySlider();
-
+function ifHomePage() {
+    if (document.body.classList.contains('home')) {
+        happyInterval = setInterval(happyFunction, 2600);
+        deskInterval = setInterval(deskFunction, 3100);
+    }
+}
+ifHomePage();
 
 //happy slider
 
