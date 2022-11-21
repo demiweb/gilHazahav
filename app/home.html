@@ -10,11 +10,13 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="./css/main.min.css">
+    <script src="https://www.youtube.com/player_api"></script>
 </head>
 <body class="home">
 
 
 <main id="save-house">
+    <a href=""></a>
     <div class="bg-head">
 
     </div>
@@ -39,7 +41,7 @@
         </div>
     </header>
 
-    <section class="save-house" >
+    <section class="save-house">
         <div class="save-house__cont">
             <h1>דיור מוגן במחיר הוגן</h1>
             <div class="text">
@@ -117,44 +119,56 @@
                         <p><strong>דויד אוחיון |</strong> דייר כבר 9 שנים </p>
                     </div>
                     <div class="heart-slider__list">
+                        <!--                        changed-->
                         <div class="heart-slider__slide active">
                             <div class="bg">
 
                             </div>
                             <div class="heart-slider__vid ">
                                 <div class="video">
-                                    <video muted="" loop="" playsinline=""
-                                           poster="./img/hvid1.jpg">
-                                        <source src="./img/video6.mp4">
-                                    </video>
+                                    <!-- Youtube -->
 
-                                    <div class="play">
-                                        <img src="./img/play.png" alt="">
+                                    <div class="video-wrapper youtube">
+                                        <div class="video-poster" style="display: block;">
+                                            <img src="https://goldenhouse.ahoygo.co.il/wp-content/uploads/2022/11/hvid1.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="play" data-video-type="youtube" data-video-id="Se1k-iVWi0w">
+                                            <img src="https://goldenhouse.ahoygo.co.il/wp-content/themes/gilhazahav/img/play.png"
+                                                 alt="">
+                                        </div>
+
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                             <div class="click"></div>
                         </div>
-                        <div class="heart-slider__slide">
+                        <div class="heart-slider__slide ">
                             <div class="bg">
 
                             </div>
                             <div class="heart-slider__vid ">
                                 <div class="video">
-                                    <video muted="" loop="" playsinline=""
-                                           poster="./img/hvid2.jpg">
-                                        <source src="./img/video6.mp4">
-                                    </video>
+                                    <!-- Youtube -->
 
-                                    <div class="play">
-                                        <img src="./img/play.png" alt="">
+                                    <div class="video-wrapper youtube">
+                                        <div class="video-poster" style="display: block;">
+                                            <img src="https://goldenhouse.ahoygo.co.il/wp-content/uploads/2022/11/hvid1.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="play" data-video-type="youtube" data-video-id="Se1k-iVWi0w">
+                                            <img src="https://goldenhouse.ahoygo.co.il/wp-content/themes/gilhazahav/img/play.png"
+                                                 alt="">
+                                        </div>
+
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                             <div class="click"></div>
                         </div>
+                        <!--                        changed -->
                         <div class="heart-slider__slide ">
                             <div class="bg">
 
@@ -214,23 +228,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="iframe-video-block" id="iframe-vid">
+                    <div class="video-block" id="video-id">
+                        <div class="video-item">
+
+                        </div>
+                    </div>
+
+
+                </div>
 
                 <div class="heart-slider__mob">
                     <div class="heart-slider__mob-cont swiper-container swiper-rtl">
                         <div class="swiper-wrapper">
+                            <!--                            changed-->
                             <div class="swiper-slide heart-mob-slide">
                                 <div class="video">
-                                    <video muted="" loop="" playsinline=""
-                                           poster="./img/hvid1.jpg">
-                                        <source src="./img/video6.mp4">
-                                    </video>
+                                    <img src="./img/hvid1.jpg" alt="">
 
-                                    <div class="play">
+
+                                    <div class="play" data-video-type="youtube" data-video-id="Se1k-iVWi0w">
                                         <img src="./img/play.png" alt="">
                                     </div>
                                 </div>
                                 <p><strong>דורון איילון |</strong> דייר כבר 8 שנים </p>
                             </div>
+                            <!--                            changed-->
                             <div class="swiper-slide heart-mob-slide">
                                 <div class="video">
                                     <video muted="" loop="" playsinline=""
@@ -301,7 +324,7 @@
     </section>
 
     <section id="happiness" class="other-bg-section">
-        <section  class="happiness">
+        <section class="happiness">
             <div class="yellow-mob happiness-t">
                 <div class="arrow-btn arrow-btn--top" data-to="happiness-t">
                     <img src="./img/arr-down1.svg" alt="">
@@ -436,10 +459,17 @@
             <div class="client__outer">
 
                 <div class="client__top">
-                    <div class="img">
-                        <img class="h-desk" src="./img/foot-i.jpg" alt="">
-                        <img class="h-mob" src="./img/foot-i2.jpg" alt="">
+                    <div class="client__top-gallery">
+                        <div class="img active">
+                            <img class="h-desk" src="./img/foot-i.jpg" alt="">
+                            <img class="h-mob" src="./img/foot-i2.jpg" alt="">
+                        </div>
+                        <div class="img ">
+                            <img class="h-desk" src="./img/foot-i2.jpg" alt="">
+                            <img class="h-mob" src="./img/foot-i.jpg" alt="">
+                        </div>
                     </div>
+
                     <div class="text">
 
                         <div class="arrow-btn arrow-btn--top" data-to="client">
