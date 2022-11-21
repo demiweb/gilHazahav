@@ -163,6 +163,7 @@ function controlDeskSlider() {
                     btn2.classList.remove('active');
                     // btn2.querySelector('video').pause();
                     // btn2.querySelector('video').load();
+                    btn2.querySelector('.heart-slider__vid').classList.remove('played');
                     btn2.querySelector('.video').classList.remove('played');
 
                 });
