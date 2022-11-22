@@ -2719,6 +2719,31 @@ Theme Name: gilhazahav
     width: 100%;
     height: 100%; }
 
+.heart-slider__vid .video {
+  overflow: hidden; }
+
+.heart-slider__vid .video > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.iframe-video-block video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.video-iframe {
+  width: 100%;
+  height: 100%; }
+
+.heart-mob-slide .video > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
 .wpcf7-not-valid {
   border-bottom: 1px solid red !important; }
 
@@ -2752,3 +2777,21 @@ Theme Name: gilhazahav
     left: 8.3333vw;
     width: calc(100vw - 8.3333vw - 8.3333vw);
     top: 44.3vw; } }
+
+.heart-slider__slide .heart-slider__vid .played .play, .heart-slider__slide .heart-slider__vid.played .play {
+  display: none; }
+
+.house-heart__cont .text {
+  z-index: 3; }
+
+.heart-slider__desk {
+  z-index: 1; }
+
+.heart-slider__list {
+  z-index: 1; }
+
+.heart-mob-slide .video video, .heart-mob-slide .video iframe, .heart-mob-slide .video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }

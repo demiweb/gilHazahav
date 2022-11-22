@@ -84,7 +84,6 @@ $(window).scroll(function (e) {
 //slider desk control
 
 
-
 //changed
 
 let activeNumberSlide = 0;
@@ -126,6 +125,7 @@ function happyFunction() {
 };
 let happyInterval;
 var player;
+
 function createVideo(videoBlockId, videoId) {
     player = new YT.Player(videoBlockId, {
         videoId: videoId,
@@ -172,10 +172,22 @@ function controlDeskSlider() {
                 });
                 if (document.querySelector('.iframe-video-block iframe')) {
                     player.pauseVideo();
+
                     document.querySelector('.iframe-video-block').classList.remove('playing');
                     document.querySelector('.iframe-video-block iframe').remove();
                 }
 
+                //new 22.11.22
+                if (document.querySelector('.iframe-video-block video')) {
+                    document.querySelector('.iframe-video-block video').pause();
+
+                    document.querySelector('.iframe-video-block').classList.remove('playing');
+                    document.querySelector('.iframe-video-block video').remove();
+                    document.querySelector('.iframe-video-block .video-iframe').remove();
+
+                }
+
+                //new 22.11.22
 
 
                 btn.classList.add('active');
@@ -192,7 +204,6 @@ controlDeskSlider();
 //slider desk control
 
 //happy slider
-
 
 
 function controlHappySlider() {
@@ -256,17 +267,33 @@ function videoControl() {
                     btn.closest('.heart-slider__vid').classList.add('played');
                     clearInterval(deskInterval);
                 }
-                setTimeout(() => {
-                    videoCont.classList.add('playing');
-                    $('.video-block').find('.video-item').append('<div class="video-iframe" id="'+videoId+'"></div>');
 
-                    createVideo(videoId, videoId);
+                setTimeout(() => {
+
+
+                    //    new 22.11.22
+
+                    if (type === 'video') {
+                        let videoBl = document.createElement('video');
+                        videoBl.src = id;
+                        videoBl.playsinline = true;
+                        videoBl.controls = true;
+                        videoCont.classList.add('playing');
+
+                        $('.video-block').find('.video-item').append('<div class="video-iframe" id="' + videoId + '"></div>');
+
+
+                        $('.video-item .video-iframe').append(videoBl);
+                        document.querySelector('.video-item video').play();
+
+                    } else {
+                        videoCont.classList.add('playing');
+                        $('.video-block').find('.video-item').append('<div class="video-iframe" id="' + videoId + '"></div>');
+                        createVideo(videoId, videoId);
+                    }
+                    //    new 22.11.22
                 }, 200);
 
-
-                if (play.closest('.heart-slider__vid')) {
-                    clearInterval(deskInterval);
-                }
 
             })
         })
@@ -299,13 +326,27 @@ function videoControlSlides() {
                     btn.closest('.heart-slider__vid').classList.add('played');
                     clearInterval(deskInterval);
                 }
-                setTimeout(() => {
+                //    new 22.11.22
+
+                if (type === 'video') {
+                    let videoBl = document.createElement('video');
+                    videoBl.src = id;
+                    videoBl.playsinline = true;
+                    videoBl.controls = true;
                     videoCont.classList.add('playing');
-                    $('.video-block').find('.video-item').append('<div class="video-iframe" id="'+videoId+'"></div>');
 
+                    $('.video-block').find('.video-item').append('<div class="video-iframe" id="' + videoId + '"></div>');
+
+
+                    $('.video-item .video-iframe').append(videoBl);
+                    document.querySelector('.video-item video').play();
+
+                } else {
+                    videoCont.classList.add('playing');
+                    $('.video-block').find('.video-item').append('<div class="video-iframe" id="' + videoId + '"></div>');
                     createVideo(videoId, videoId);
-                }, 200);
-
+                }
+                //    new 22.11.22
 
 
             })
@@ -314,9 +355,6 @@ function videoControlSlides() {
 }
 
 videoControlSlides();
-
-
-
 
 
 //slider
@@ -365,6 +403,17 @@ function scroSlider() {
                         document.querySelector('.iframe-video-block').classList.remove('playing');
                         document.querySelector('.iframe-video-block iframe').remove();
                     }
+                //    new 22.11.22
+                    if (document.querySelector('.iframe-video-block video')) {
+                        document.querySelector('.iframe-video-block video').pause();
+
+                        document.querySelector('.iframe-video-block').classList.remove('playing');
+                        document.querySelector('.iframe-video-block video').remove();
+                        document.querySelector('.iframe-video-block .video-iframe').remove();
+
+                    }
+
+                //    new 22.11.22
                 });
             });
         })

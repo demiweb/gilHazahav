@@ -754,6 +754,7 @@ main {
       height: 100%;
       object-fit: cover;
     }
+
     &.active {
       opacity: 1;
       visibility: visible;
@@ -814,6 +815,7 @@ main {
   }
 
 }
+
 .client__top-gallery {
   width: 100%;
   height: 100%;
@@ -891,7 +893,7 @@ main {
     gap: 1.2971vw 0.6771vw;
 
 
-    > p{
+    > p {
       width: 100%;
       display: flex;
       align-items: stretch;
@@ -929,6 +931,7 @@ main {
       }
     }
   }
+
   span {
     width: 100%;
     display: inline-block;
@@ -1405,8 +1408,9 @@ main {
 
 
 .h-desk {
-display: flex;
+  display: flex;
 }
+
 .h-mob {
   display: none;
 }
@@ -1418,12 +1422,14 @@ display: flex;
 .fixed-mob-foot {
   display: none;
 }
+
 @media screen and (min-width: 781px) {
   .happiness__cont {
     padding-bottom: 7vw;
   }
 
 }
+
 @media screen and (max-width: 780px) {
 
   .h-desk {
@@ -1585,6 +1591,7 @@ display: flex;
 
     form {
       gap: 6.9444vw;
+
       > p {
         gap: 6.9444vw;
       }
@@ -2457,52 +2464,89 @@ Theme Name: gilhazahav
   opacity: 0;
   pointer-events: none;
   z-index: 1;
+
   &.playing {
     opacity: 1;
     pointer-events: auto;
   }
+
   .video-block {
     width: 100%;
     height: 100%;
   }
+
   .video-item {
     width: 100%;
     height: 100%;
   }
+
   iframe {
     width: 100%;
     height: 100%;
   }
 }
-.wpcf7-not-valid{
-  border-bottom:1px solid red!important;
+
+//new 22.11.22
+.heart-slider__vid .video {
+  overflow: hidden;
 }
-.wpcf7-not-valid-tip, .wpcf7-validation-errors{
-  display:none!important;
+
+.heart-slider__vid .video > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.iframe-video-block video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.heart-mob-slide .video > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+//new 22.11.22
+
+
+.wpcf7-not-valid {
+  border-bottom: 1px solid red !important;
+}
+
+.wpcf7-not-valid-tip, .wpcf7-validation-errors {
+  display: none !important;
+}
+
 .wpcf7-response-output {
-  display: none!important;
+  display: none !important;
 }
 
 .house-heart__cont .video-wrapper,
 .house-heart__cont .video-wrapper iframe,
-.house-heart__cont .video-wrapper .video-poster{
-  width:100%;
-  height:100%;
+.house-heart__cont .video-wrapper .video-poster {
+  width: 100%;
+  height: 100%;
 }
 
-.house-heart__cont .video-wrapper iframe{
-  border:0;
+.house-heart__cont .video-wrapper iframe {
+  border: 0;
 }
 
-.house-heart__cont .video-wrapper .video-poster img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.house-heart__cont .video-wrapper .video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.house-heart__cont .play{
-  cursor:pointer;
+.house-heart__cont .play {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 780px) {
@@ -2514,3 +2558,28 @@ Theme Name: gilhazahav
   }
 }
 
+//stlt
+
+
+.heart-slider__slide .heart-slider__vid .played .play, .heart-slider__slide .heart-slider__vid.played .play {
+  display: none;
+}
+
+.house-heart__cont .text {
+  z-index: 3;
+}
+
+.heart-slider__desk {
+  z-index: 1;
+}
+
+.heart-slider__list {
+  z-index: 1;
+}
+
+.heart-mob-slide .video video, .heart-mob-slide .video iframe, .heart-mob-slide .video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
